@@ -1,4 +1,4 @@
-import Fighter from './Fighter';
+import Fighter, { SimpleFighter } from './Fighter';
 import Race from './Races/Race';
 import Archetype from './Archetypes/Archetype';
 import Energy from './Energy';
@@ -58,11 +58,11 @@ class Character implements Fighter {
     return { ...this._energy };
   }
 
-  attack(enemy: Fighter): void {
+  attack(enemy: SimpleFighter): void {
     enemy.receiveDamage(this._strength);
   }
 
-  special(enemy: Fighter): void {
+  special(enemy: SimpleFighter): void {
     const specialAttackStrength = this._strength + 5; 
     enemy.receiveDamage(specialAttackStrength);
   }

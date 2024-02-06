@@ -1,4 +1,4 @@
-import SimpleFighter from './Fighter/SimpleFighter';
+import { SimpleFighter } from './Fighter';
 
 class Monster implements SimpleFighter {
   private _lifePoints: number;

@@ -1,11 +1,10 @@
-import Character from '../Character';
-import { SimpleFighter } from '../Fighter';
+import Fighter, { SimpleFighter } from '../Fighter';
 import Battle from './Battle';
 
 class PVE extends Battle {
   private _opponents: SimpleFighter[];
 
-  constructor(player: Character, opponents: SimpleFighter[]) {
+  constructor(player: Fighter, opponents: SimpleFighter[]) {
     super(player);
     this._opponents = opponents;
   }
